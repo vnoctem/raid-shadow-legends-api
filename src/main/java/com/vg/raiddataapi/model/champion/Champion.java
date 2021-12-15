@@ -1,11 +1,7 @@
-package com.vg.raiddataparser.model.champion;
-
-import com.vg.raiddataparser.model.Skill;
+package com.vg.raiddataapi.model.champion;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Transient;
-import java.util.List;
 
 @Entity
 public class Champion {
@@ -27,9 +23,6 @@ public class Champion {
     private int criticalDamage;
     private int criticalHeal;
 
-    @Transient
-    private List<Skill> skills;
-
     public Champion() {}
 
     public Champion(Builder builder) {
@@ -48,7 +41,6 @@ public class Champion {
         this.criticalChance = builder.criticalChance;
         this.criticalDamage = builder.criticalDamage;
         this.criticalHeal = builder.criticalHeal;
-        this.skills = builder.skills;
     }
 
     public int getId() { return id; }
@@ -81,11 +73,35 @@ public class Champion {
 
     public int getCriticalHeal() { return criticalHeal; }
 
-    public List<Skill> getSkills() { return skills; }
+    public void setId(int id) {this.id = id;}
 
-    public void setSkills(List<Skill> skills) {
-        this.skills = skills;
-    }
+    public void setName(String name) {this.name = name;}
+
+    public void setAffinity(String affinity) {this.affinity = affinity;}
+
+    public void setRole(String role) {this.role = role;}
+
+    public void setFaction(String faction) {this.faction = faction;}
+
+    public void setRarity(String rarity) {this.rarity = rarity;}
+
+    public void setHealth(int health) {this.health = health;}
+
+    public void setAttack(int attack) {this.attack = attack;}
+
+    public void setDefense(int defense) {this.defense = defense;}
+
+    public void setSpeed(int speed) {this.speed = speed;}
+
+    public void setResistance(int resistance) {this.resistance = resistance;}
+
+    public void setAccuracy(int accuracy) {this.accuracy = accuracy;}
+
+    public void setCriticalChance(int criticalChance) {this.criticalChance = criticalChance;}
+
+    public void setCriticalDamage(int criticalDamage) {this.criticalDamage = criticalDamage;}
+
+    public void setCriticalHeal(int criticalHeal) {this.criticalHeal = criticalHeal;}
 
     @Override
     public String toString() {
@@ -105,7 +121,6 @@ public class Champion {
                 ", criticalChance=" + criticalChance +
                 ", criticalDamage=" + criticalDamage +
                 ", criticalHeal=" + criticalHeal +
-                ", skills=" + skills +
                 '}';
     }
 
@@ -126,7 +141,6 @@ public class Champion {
         private int criticalChance;
         private int criticalDamage;
         private int criticalHeal;
-        private List<Skill> skills;
 
         public Builder setId(int id) {
             this.id = id;
@@ -203,14 +217,8 @@ public class Champion {
             return this;
         }
 
-        public Builder setSkills(List<Skill> skills) {
-            this.skills = skills;
-            return this;
-        }
-
         public Champion build() {
             return new Champion(this);
         }
     }
-
 }

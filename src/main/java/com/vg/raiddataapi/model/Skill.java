@@ -1,6 +1,6 @@
-package com.vg.raiddataparser.model;
+package com.vg.raiddataapi.model;
 
-import com.vg.raiddataparser.model.champion.Champion;
+import com.vg.raiddataapi.model.champion.Champion;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;

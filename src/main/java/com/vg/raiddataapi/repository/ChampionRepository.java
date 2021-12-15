@@ -1,6 +1,6 @@
-package com.vg.raiddataparser.repository;
+package com.vg.raiddataapi.repository;
 
-import com.vg.raiddataparser.model.champion.Champion;
+import com.vg.raiddataapi.model.champion.Champion;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.vg.raiddataparser.model.champion.attributes;
+package com.vg.raiddataapi.model.champion.attributes;
 
 import java.util.HashMap;
 import java.util.Map;
