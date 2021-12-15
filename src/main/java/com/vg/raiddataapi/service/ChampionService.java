@@ -1,11 +1,11 @@
 package com.vg.raiddataapi.service;
 
+import com.vg.raiddataapi.exception.EntityNotFoundException;
 import com.vg.raiddataapi.model.champion.Champion;
 import com.vg.raiddataapi.repository.ChampionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @Service
@@ -18,16 +18,16 @@ public class ChampionService {
         return championRepository.findAll();
     }
 
-    public Champion getChampionById(int id) {
+    public Champion getChampionById(Integer id) throws EntityNotFoundException{
         return championRepository.findById(id)
-                .orElseThrow(EntityNotFoundException::new);
+                .orElseThrow(() -> new EntityNotFoundException(Champion.class, "id", id.toString()));
     }
 
     public Champion saveChampion(Champion champion) {
         return championRepository.save(champion);
     }
 
-    public void deleteChampion(int id) {
+    public void deleteChampion(Integer id) {
         championRepository.deleteById(id);
     }
 }
