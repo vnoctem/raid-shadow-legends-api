@@ -1,7 +1,7 @@
 package com.vg.raiddataapi.controller;
 
 import com.vg.raiddataapi.model.Skill;
-import com.vg.raiddataapi.model.champion.Champion;
+import com.vg.raiddataapi.model.Champion;
 import com.vg.raiddataapi.service.ChampionService;
 import com.vg.raiddataapi.service.SkillService;
 import org.springframework.beans.factory.annotation.Autowired;

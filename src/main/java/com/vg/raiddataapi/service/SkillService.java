@@ -2,7 +2,7 @@ package com.vg.raiddataapi.service;
 
 import com.vg.raiddataapi.exception.EntityNotFoundException;
 import com.vg.raiddataapi.model.Skill;
-import com.vg.raiddataapi.model.champion.Champion;
+import com.vg.raiddataapi.model.Champion;
 import com.vg.raiddataapi.repository.ChampionRepository;
 import com.vg.raiddataapi.repository.SkillRepository;
 import org.springframework.beans.factory.annotation.Autowired;
