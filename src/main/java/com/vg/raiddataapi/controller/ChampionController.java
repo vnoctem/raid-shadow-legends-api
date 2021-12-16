@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/champions")
+@RequestMapping("/v1/champions")
 public class ChampionController {
 
     @Autowired
