@@ -1,7 +1,11 @@
 package com.vg.raiddataapi.model.champion;
 
+import com.vg.raiddataapi.model.Skill;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+import java.util.List;
 
 @Entity
 public class Champion {
@@ -221,4 +225,5 @@ public class Champion {
             return new Champion(this);
         }
     }
+
 }

@@ -1,5 +1,6 @@
 package com.vg.raiddataapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vg.raiddataapi.model.champion.Champion;
 import org.hibernate.annotations.Type;
 
@@ -13,6 +14,7 @@ public class Skill {
 
     @ManyToOne
     @JoinColumn(name="champion_id")
+    @JsonIgnore
     private Champion champion;
 
     private int revision;
@@ -139,5 +141,4 @@ public class Skill {
             return new Skill(this);
         }
     }
-
 }
