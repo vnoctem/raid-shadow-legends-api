@@ -1,6 +1,5 @@
 package com.vg.raiddataapi.controller;
 
-import com.vg.raiddataapi.model.Champion;
 import com.vg.raiddataapi.model.Skill;
 import com.vg.raiddataapi.service.SkillService;
 import io.swagger.v3.oas.annotations.Operation;
